@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models: 
+      item: アイテム
+    attributes:
+      item:
+        name: 材料名
+        capacity: 容量
+        until: 単位
+        quantity: 個数
+        place: 場所
+        deliverydate: 納品日

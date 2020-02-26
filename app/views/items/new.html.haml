@@ -8,6 +8,7 @@
         在庫追加
       .new_main_box
         .new_main_box_text
+          = render 'layouts/error_messages', model: f.object
           .form_text
             .field
               %label 材料名
