@@ -1,0 +1,69 @@
+.new{
+  width: 100%;
+  height: 100vh;
+  background-color:	#E6FFE9;
+  overflow-x: hidden;
+    &_header{
+    height: 80px;
+    background-color: #CCFFCC;
+    display: flex;
+    justify-content: space-between;
+      &_name{
+      height: 100%;
+      width: 250px;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 21px;
+        .neta{
+        text-decoration: none;
+        color: black;
+        }
+      }
+    }
+    .new_main{
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: #E6FFE9;
+      &_title{
+        font-size: 27px;
+        text-align: center;
+        padding: 15px;
+      }
+      &_box{
+        height: 700px;
+        &_text{
+         padding: 40px;
+         height: 600px;
+       
+         .form_text{
+           width: 700px;
+           height: 500px;
+           margin: auto;
+           .field{
+             width: 200px;
+             font-size: 25px;
+             .text{
+               width: 700px;
+              }
+            }
+            .form_text_btn{
+              text-align: center;
+              padding-top: 50px;
+             .form__btn{
+               width: 300px;
+               background-color: cornflowerblue;
+               height: 80px;
+             }
+            }
+
+          }
+        }
+      }
+    }
+  }
+    #place{
+  width: 700px;
+}
+#until{
+  width: 700px;
+}

@@ -1,0 +1,35 @@
+= form_with(url: "/items/create",newmodel: @item, local: true )do |f|
+  .new
+    .new_header
+      .new_header_name
+        =link_to "NETASTOCKS",root_path,class:'neta'
+    .new_main
+      .new_main_title
+        在庫追加
+      .new_main_box
+        .new_main_box_text
+          = render 'layouts/error_messages', model: f.object
+          .form_text
+            .field
+              %label 材料名
+              = f.text_field :name,class: 'text'
+            .field
+              %label 容量
+              = f.number_field :capacity,class: 'text'
+            .field
+              %label 単位
+              = f.select :until,[ ["g","g"], ["kg", "kg"],["t","t"], ["個", "個"],["パック","パック"], ["枚", "枚"]], prompt: "---"
+            .field
+              %label 個数
+              = f.text_field :quantity,class: 'text'
+            .field
+              %label 場所
+              = f.select :place,[ ["プレハブ","プレハブ"], ["リーチン", "リーチン"], ["１番冷蔵庫", "１番冷蔵庫"], ["２番冷蔵庫", "２番冷蔵庫"], ["３番冷蔵庫", "３番冷蔵庫"], ["１番冷凍庫", "１番冷凍庫"], ["２番冷凍庫", "２番冷凍庫"] , ["切りネタ冷凍庫", "切りネタ冷凍庫"], ["ハマチ倉庫", "ハマチ倉庫"], ["ネタ切り冷蔵庫", "ネタ切り冷蔵庫"]], prompt: "---"
+            .field
+              %label 納品日
+              = f.text_field :deliverydate,class: 'text'
+            .form_text_btn
+              = f.submit '追加する',class: :form__btn
+
+
+
