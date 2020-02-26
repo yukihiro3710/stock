@@ -1,14 +1,16 @@
-= form_with(model: @item, local: true , method: :post)do |f|
-  .new
-    .new_header
-      .new_header_name
+= form_with(model: @item, local: true,method: :PATCH ) do |f|
+  .edit
+    .edit_header
+      .edit_header_name
         =link_to "NETASTOCKS",root_path,class:'neta'
-    .new_main
-      .new_main_title
-        在庫追加
-      .new_main_box
-        .new_main_box_text
-          = render 'layouts/error_messages', model: f.object
+    .edit_main
+      .edit_main_title
+        在庫編集
+      .edit_main_box
+        .edit_main_box_text
+          .box
+            .box_box
+              = link_to '削除', "/items/#{@item.id}", method: :delete,class: "destroy"
           .form_text
             .field
               %label 材料名
@@ -29,7 +31,6 @@
               %label 納品日
               = f.text_field :deliverydate,class: 'text'
             .form_text_btn
-              = f.submit '追加する',class: :form__btn
-
+              = f.submit '変更する',class: :form__btn
 
 

@@ -27,20 +27,19 @@
             納品日
           .type_edit
             編集
-        .top_main_stock_box_item
-          -# - @item.each do |item|
-
-          .item_name
-          
-          .item_capacity
-            100
-          .item_unit
-            枚
-          .item_quantity
-            10個
-          .item_place
-            リーチ
-          .item_delivery
-            5月25日
-          .item_edit
-            =link_to "編集" 
+        - @items.each do |item|
+          .top_main_stock_box_item
+            .item_name
+              = item.name
+            .item_capacity
+              = item.capacity
+            .item_unit
+              = item.until
+            .item_quantity
+              = item.quantity
+            .item_place
+              = item.place
+            .item_delivery
+              = item.deliverydate
+            .item_edit
+              =link_to "編集","/items/#{item.id}/edit", method: :get
