@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
+  PER = 8
   def index
-    @items = Item.all
+    @items = Item.page(params[:page]).per(PER)
   end
   
   def new
@@ -36,10 +37,10 @@ class ItemsController < ApplicationController
     end
   end
 
-
-
-
-
+  def search
+    @items = Item.where(['name like ?', "%#{params[:search]}%"])
+   
+  end
 
 
 
