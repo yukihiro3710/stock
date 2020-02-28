@@ -38,9 +38,6 @@
   }
   &_main{
     width: 100%;
-    background-repeat: no-repeat;
-    background-image: url("nigirizushi_moriawase.png");
-    background-position: left 50% top 15%;
     &_text{
       padding: 20px;
       height: 80px;
@@ -124,7 +121,7 @@
              height: 50px;
              width: 218px;
              padding-top: 10px;
-             color:#1E90FF;
+             color:black;
             }
             .item_quantity{
               font-size: 20px;
