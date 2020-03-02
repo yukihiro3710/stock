@@ -3,11 +3,13 @@
     .top_header_name
       NETASTOCKS
     .top_header_search
-      検索 
-      //検索フォーム追加する（曖昧検索）
+      = form_tag(search_items_path,method: :get,class:"a") do
+        = text_field_tag :search, "",placeholder:"何かお探しですか？",class: "tag"
+        = submit_tag '検索', :name => nil,class: "kensaku"
   .top_main
     .top_main_text
       ネタ在庫一覧
+                    
     .top_main_btn
       =link_to "追加",new_item_path
     .top_main_stock
@@ -43,3 +45,5 @@
               = item.deliverydate
             .item_edit
               =link_to "編集","/items/#{item.id}/edit", method: :get
+        = paginate @items
+

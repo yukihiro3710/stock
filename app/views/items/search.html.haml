@@ -1,0 +1,63 @@
+.search
+  .search_header
+    .search_header_name
+      =link_to "NETASTOCKS",root_path,class:'neta'
+  .search_main
+    .search_main_text
+      検索結果
+    .search_main_stock
+      .search_main_stock_box
+        .search_main_stock_box_type
+          .type_name
+            ネタ名
+          .search_capacity
+            内容量
+          .search_unit
+            単位
+          .search_quantity
+            個数
+          .search_place
+            場所
+          .search_delivery
+            納品日
+          .search_edit
+            編集
+        - @items.each do |i|
+          .search__box
+            .search__box__name
+              = i.name
+            .search__box__capacity
+              = i.capacity
+            .search__box__unit
+              = i.until
+            .search__box__quantity
+              = i.quantity
+            .search__box__place
+              = i.place
+            .search__box__delivery
+              = i.deliverydate
+            .search__box___edit
+              =link_to "編集","/items/#{i.id}/edit", method: :get
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
