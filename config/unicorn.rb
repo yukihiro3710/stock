@@ -9,7 +9,6 @@ working_directory "#{app_path}/current"
 
 #Unicornの起動に必要なファイルの設置場所を指定
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
-
 #ポート番号を指定
 listen 3000
 
@@ -17,13 +16,6 @@ listen 3000
 listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
 
 #通常のログを記録するファイルを指定
-
-
-
-
-
-
-
 
 
 
