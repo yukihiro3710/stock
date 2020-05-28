@@ -71,5 +71,5 @@ gem 'rails-i18n'
 group :production do
   gem 'unicorn', '5.4.1'
 end
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
